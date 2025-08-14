@@ -11,8 +11,9 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 
+import BaseClassHrm.baseClassHrm;
 import GenericUtility.WebDriverUtilityHrm;
-import baseClassUtility.BaseClass;
+
 
 public class listiners implements ITestListener {
 	
@@ -27,7 +28,7 @@ public class listiners implements ITestListener {
 	public void onTestFailure(ITestResult result) {
 		String method = result.getMethod().getMethodName();
 		
-		TakesScreenshot ts= (TakesScreenshot) BaseClass.sDriver;
+		TakesScreenshot ts= (TakesScreenshot) baseClassHrm.sdriver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
 		File tgt = new File(".\\errorShot\\"+result.getName()+Math.random()+".png");
 		try {
