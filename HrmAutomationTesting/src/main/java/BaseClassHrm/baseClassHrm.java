@@ -26,7 +26,7 @@ public class baseClassHrm {
 	propertyUtilityHrm pu= new propertyUtilityHrm();
 	ExcelUtilityHrm eu = new ExcelUtilityHrm();
 	WebDriverUtilityHrm wu = new WebDriverUtilityHrm();
-	WebDriver driver=null;//to initialize the driver
+	public WebDriver driver=null;//to initialize the driver
 	
 	@BeforeSuite(groups= {"smokeTest","regressionTest"})
 	public void configBS() {
