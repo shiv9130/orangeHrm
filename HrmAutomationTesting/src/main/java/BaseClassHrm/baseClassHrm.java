@@ -44,11 +44,11 @@ public class baseClassHrm {
 		String brow = pu.propUtil("Browser");
 		String url = pu.propUtil("URL");
 		System.out.println(brow);
-		if(brow.equalsIgnoreCase("Browser")) {
+		if(brow.equalsIgnoreCase("chrome")) {
 			driver=new ChromeDriver();
-		}else if (brow.equalsIgnoreCase("Browser")) {
+		}else if (brow.equalsIgnoreCase("edge")) {
 			driver=new EdgeDriver();
-		}else if (brow.equalsIgnoreCase("Browser")) {
+		}else if (brow.equalsIgnoreCase("firefox")) {
 			driver=new FirefoxDriver();
 		}else {
 			driver = new ChromeDriver();
@@ -56,6 +56,7 @@ public class baseClassHrm {
 	
 		driver.get(url);
 		wu.maximizeWin(driver);
+		wu.implicitlyWaitLoadPage(driver);
 		Reporter.log("browser launch and enter url sucessfully");
 		
 		
