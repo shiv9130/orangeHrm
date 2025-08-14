@@ -73,7 +73,7 @@ public class baseClassHrm {
 		System.out.println(pw);
 		lp.LoginHrm(un, pw);
 		
-		Reporter.log("login as user sucessfully");
+		Reporter.log("login as user sucessfully perform");
 		
 	  }
 	@AfterMethod(groups= {"smokeTest","regressionTest"})
